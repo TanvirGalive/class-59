@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>class-59</title>
+    
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/css/animate.min.css" rel="stylesheet">
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/css/responsive.css" rel="stylesheet">
+        
+    </head>
+    <body>
+        
+    
+        <div class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="section-title">
+                            <h2>Google Maps JavaScript API</h2>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="row">
+                    <div class="col-md-12">
+                       <div id="map"></div>
+                        <script>
+                            function initMap() {
+                                var options = {lat:24.9132, lng:88.7531};
+                                var map = new google.maps.Map(document.getElementById('map'), {
+                                  zoom: 8, 
+                                  center: options,
+                                  scrollwheel: false,
+                                  styles:[
+                                {elementType: 'geometry', stylers: [{color: '#f7f7f7'}]},
+                                 {
+                                  featureType: 'road',
+                                  elementType: 'geometry',
+                                  stylers: [{color: '#ffffff'}]
+                                },
+                                 {
+                                  featureType: 'water',
+                                  elementType: 'geometry',
+                                  stylers: [{color: '#ededed'}]
+                                },
+                                
+                                {  
+                                  featureType: 'road',
+                                  elementType: 'labels.text.fill',
+                                  stylers: [{color: '#9ca5b3'}]
+                                },
+
+                                 {
+                                  featureType: 'transit',
+                                  elementType: 'geometry',
+                                  stylers: [{color: '#2f3948'}]
+                                },
+                                {
+                                  featureType: 'transit.station',
+                                  elementType: 'labels.text.fill',
+                                  stylers: [{color: '#d59563'}]
+                                },
+                                                    ],  
+                             });
+                                var marker = new google.maps.Marker({
+                                  position: options ,
+                                  map: map
+                                });
+                              }
+                        </script>
+                        <script async defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXAg5RPse4H6SiwuvdFSg9sAI2fyKcS6Q&callback=initMap">  </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
